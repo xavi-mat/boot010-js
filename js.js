@@ -2,7 +2,7 @@
 // 1.Variables
 console.log(`
 /////////////////////////
-// 1.Variables
+// 1.Variables         //
 /////////////////////////`);
 
 // Crea un cuadro de diálogo (alert) que muestre lo siguiente “JavaScript funcionando correctamente”
@@ -21,7 +21,7 @@ let booleano2 = false;
 console.log("Variables booleanas:", booleano1, booleano2);
 
 // Crear variable tipo const de nombre PI declarada con valor 3.14
-const PI = 3.14159
+const PI = Math.PI;
 console.log("PI (π):", PI);
 
 // Crear variable tipo const de nombre TAU declarada con valor 2 veces PI
@@ -49,8 +49,8 @@ console.log("typeof miNumeroFav:", typeof miNumeroFav);
 
 // Muestra un console.log que diga ‘Mi nombre es Euralio y mi numero favorito es 7” concatenado variables declaradas más arriba.
 // LAS VARIABLES DECLARADAS MÁS ARRIBA ERAN CONSTANTES, NO PUEDO CAMBIAR SU TEXTO:
-// miNombre = "Euralio";
-// miNumeroFav = 7;
+// miNombre = "Euralio";    // Error
+// miNumeroFav = 7;         // Error
 console.log('Mi nombre es ' + miNombre + ' y mi numero favorito es ' + miNumeroFav);
 // console.log(`Mi nombre es ${miNombre} y mi numero favorito es ${miNumeroFav}`);
 
@@ -71,14 +71,14 @@ const otraVariable  = `He concatenado con 'template literal': ${unaVariable}`;
 console.log("Concatenado con template literal:", otraVariable);
 
 // Muestra por consola la variable PI hasta los 2 primeros decimales
-console.log("Pi con dos decimales:", PI.toFixed(2));
+console.log("PI (π) con dos decimales:", PI.toFixed(2));
 
 
 ////////////////////////////////////////////////////////////////////////////////
 // 2.Arrays
 console.log(`
 /////////////////////////
-// 2.Arrays
+// 2.Arrays            //
 /////////////////////////`);
 
 // Crear variable de nombre arrayVacio cuyo valor sea un array vacío
@@ -94,16 +94,18 @@ const arrayNumeros2 = [...Array(16).keys()];
 console.log("arrayNumeros2:", arrayNumeros2);
 
 // Crear variable de nombre arrayNumerosPares declarada con un array con los números pares del 0 al 9 (considerando al 0 par)
-const arrayNumerosPares = [...Array(10).keys()].filter((n)=>n%2==0);
+const arrayNumerosPares = [...Array(10).keys()].filter((n)=> n % 2 == 0);
 console.log("arrayNumerosPares:", arrayNumerosPares);
 
 // Crear variable de nombre arrayNumerosNeg declarada con un array de números del 0 al -9 (0, -1, -2...)
-// const arrayNumerosNegCeroNegativo = [...Array(10).keys()].map((n)=>-n);
-const arrayNumerosNeg = [...Array(10).keys()].map((n)=>n>0?-n:0);
+// const arrayNumerosNegCeroNegativo = [...Array(10).keys()].map((n) => -n);
+const arrayNumerosNeg = [...Array(10).keys()].map((n) => n > 0 ? -n : 0);
 console.log("arrayNumerosNeg:", arrayNumerosNeg);
 
 // Crear variable de nombre holaMundo declarada con valor array con las palabras 'Hola' y 'Mundo'
 const holaMundo = "Hola Mundo".split(' ');
+// ¿Quizá era mejor así?:
+// const holaMundo = ["Hola", "Mundo"];
 console.log("holaMundo:", holaMundo);
 
 // Crear variable de nombre loGuardoTodo declarada con valor array con valores 'hola', 'que', 23, 42.33 y 'tal'
@@ -126,6 +128,7 @@ const unNuevoElemento = 'un nuevo elemento';
 loGuardoTodo.push(unNuevoElemento);
 console.log("unNuevoElemento:", unNuevoElemento);
 console.log("loGuardoTodo.at(-1):", loGuardoTodo.at(-1));
+console.log("loGuardoTodo:", loGuardoTodo);
 
 // Ordena de mayor a menor la variable arrayNumeros y muestrala por consola
 arrayNumeros.sort((a,b)=>b-a);
@@ -134,7 +137,7 @@ console.log("La misma array, en forma de tabla:");
 console.table(arrayNumeros);
 
 // Ordena de menor a mayor la variable arrayNumeros2 y muestrala por consola
-// ESTA ARRAY YA ESTABA ORDENADA DE MENOR A MAYOR
+// ESTA ARRAY YA ESTABA ORDENADA DE MENOR A MAYOR, NO SE NOTAN CAMBIOS
 arrayNumeros2.sort((a,b)=>a-b);
 console.log("arrayNumeros2:", arrayNumeros2);
 console.log("La misma array, en forma de tabla:");
@@ -164,6 +167,7 @@ const Coche = {
     matricula: 'ABC123',
 };
 console.log("Coche:", Coche);
+console.table(Coche);
 
 // Crea un objeto de nombre Casa que tenga las propiedades: codPostal, calle, portal y piso con sus respectivos valores
 const Casa = {
@@ -173,6 +177,7 @@ const Casa = {
     piso: '5',
 }
 console.log("Casa:", Casa);
+console.table(Casa);
 
 // Crea un objeto de nombre FullStackDeveloper que tenga las propiedades: array lenguajes(ej. ‘javascript’,’php’), array proyectos(ej. ‘mi página personal’,etc)
 const FullStackDeveloper = {
@@ -180,6 +185,7 @@ const FullStackDeveloper = {
     proyectos: ['mi página personal', 'etc'],
 };
 console.log("FullStackDeveloper:", FullStackDeveloper);
+console.table(FullStackDeveloper);
 
 // Crea un objeto de nombre Perro que tenga las propiedades: nombre, raza, color y edad con sus respectivos valores
 const Perro = {
@@ -189,6 +195,7 @@ const Perro = {
     edad: 4,
 };
 console.log("Perro:", Perro);
+console.table(Perro);
 
 // Crea un objeto de nombre Noticia que tenga las propiedades: titular y cuerpo con sus respectivos valores
 const Noticia  =  {
@@ -196,6 +203,7 @@ const Noticia  =  {
     cuerpo: 'Cuerpo de la noticia',
 };
 console.log("Noticia:", Noticia);
+console.table(Noticia);
 
 // Crea un objeto de nombre Persona que tenga las propiedades: nombre, apellidos y edad con sus respectivos valores
 const Persona = {
@@ -204,6 +212,7 @@ const Persona = {
     edad: 34,
 };
 console.log("Persona:", Persona);
+console.table(Persona);
 
 // Muestra por consola el nombre de la variable Persona
 // Técnicamente, "el nombre de la variable Persona" es 'Persona'.
@@ -221,21 +230,23 @@ const Portatil = {
 console.log("Propiedad 'marca' de Portatil:", Portatil.marca);
 
 // Obtén el valor de la propiedad marca del objeto anteriormente creado (Portatil) con ["marca"] y muestrala por consola
-const obtengoElValor = Portatil["marca"];
-console.log('obtengoElValor de ["marca"]:', obtengoElValor);
+console.log('obtengoElValor de ["marca"]:', Portatil["marca"]);
 
 // Crea un objeto de nombre Concierto con una propiedad llamada grupos que es un array, obtén el valor de la propiedad y muestrala por consola
 const Concierto = {
-    grupos: [],
+    grupos: ['Los Chunguitos'],
 }
+console.log("Concierto:", Concierto);
 console.log("Propiedad 'grupos' de 'Concierto':", Concierto.grupos);
 
 // Crea un objeto de nombre Led, con las propiedades: rojo, verde y azul, obtén el valor de las propiedades guardándolo en la variable array RGB[Rojo, Verde, Azul] y muestra este array por consola
 const Led = {
-    rojo: 0,
-    verde: 0,
-    azul: 0,
+    rojo: 20,
+    verde: 40,
+    azul: 70,
 };
+console.log("Led:", Led);
+console.table(Led);
 const RGB = [Led.rojo, Led.verde, Led.azul];
 console.log("RGB:", RGB);
 
@@ -244,7 +255,7 @@ const O_Error = {
     "código": "Cierto código con acento en la propiedad",
     codigo: "Cierto código sin acento en la propiedad",
 };
-console.log("O_Error.codigo):", O_Error.codigo);
+console.log("O_Error.codigo:", O_Error.codigo);
 console.log('O_Error["código"]:', O_Error["código"]);
 
 // Crea un objeto de nombre Grupo con la propiedad integrantes (array),obtén el valor de la propiedad guardándolo en la variable integrantes y muestrala por consola
