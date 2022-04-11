@@ -1,5 +1,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 // 1.Variables
+console.log(`
+/////////////////////////
+// 1.Variables
+/////////////////////////`);
+
 // Crea un cuadro de diálogo (alert) que muestre lo siguiente “JavaScript funcionando correctamente”
 // alert("JavaScript funcionando correctamente");
 
@@ -71,6 +76,11 @@ console.log("Pi con dos decimales:", PI.toFixed(2));
 
 ////////////////////////////////////////////////////////////////////////////////
 // 2.Arrays
+console.log(`
+/////////////////////////
+// 2.Arrays
+/////////////////////////`);
+
 // Crear variable de nombre arrayVacio cuyo valor sea un array vacío
 const arrayVacio = [];
 console.log("arrayVacío:", arrayVacio);
@@ -120,12 +130,14 @@ console.log("loGuardoTodo.at(-1):", loGuardoTodo.at(-1));
 // Ordena de mayor a menor la variable arrayNumeros y muestrala por consola
 arrayNumeros.sort((a,b)=>b-a);
 console.log("arrayNumeros:", arrayNumeros);
+console.log("La misma array, en forma de tabla:");
 console.table(arrayNumeros);
 
 // Ordena de menor a mayor la variable arrayNumeros2 y muestrala por consola
 // ESTA ARRAY YA ESTABA ORDENADA DE MENOR A MAYOR
 arrayNumeros2.sort((a,b)=>a-b);
 console.log("arrayNumeros2:", arrayNumeros2);
+console.log("La misma array, en forma de tabla:");
 console.table(arrayNumeros2);
 
 // Muestra por consola la propiedad ‘que’ de la variable loGuardoTodo
@@ -139,7 +151,12 @@ console.log("loGuardoTodo con 'Euralio' añadido:", loGuardoTodo);
 
 
 ////////////////////////////////////////////////////////////////////////////////
-// 2.Objetos
+// 3.Objetos
+console.log(`
+/////////////////////////
+// 3.Objetos           //
+/////////////////////////`);
+
 // Crea un objeto de nombre Coche que tenga las propiedades: marca, modelo y matrícula con sus respectivos valores
 const Coche = {
     marca: 'Ford',
