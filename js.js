@@ -146,7 +146,8 @@ console.table(arrayNumeros2);
 // Muestra por consola la propiedad ‘que’ de la variable loGuardoTodo
 // NO HAY 'PROPIEDAD' 'que', EXISTE EL VALOR 'que' EN CIERTA POSICIÓN
 console.log("No hay propiedad llamada 'que',", loGuardoTodo.que);
-console.log("Sí hay un valor 'que' en segunda posición:", loGuardoTodo[1]);
+const indiceDeQue = loGuardoTodo.indexOf('que');
+console.log(`Sí hay un valor 'que' con índice ${indiceDeQue}:`, loGuardoTodo[indiceDeQue]);
 
 // Añade la propiedad ‘Euralio’ en la array loGuardoTodo y muestrala por consola
 loGuardoTodo.push('Euralio');
@@ -164,7 +165,7 @@ console.log(`
 const Coche = {
     marca: 'Ford',
     modelo: 'Fiesta',
-    matricula: 'ABC123',
+    matricula: '123ABC',
 };
 console.log("Coche:", Coche);
 console.table(Coche);
@@ -218,10 +219,16 @@ console.table(Persona);
 // Técnicamente, "el nombre de la variable Persona" es 'Persona'.
 // El "valor de la propiedad 'nombre', en la variable 'Persona', es otra cosa."
 console.log("Nombre de la variable 'Persona': 'Persona'.")
-console.log("Valor de la propiedad 'nombre' de la variable Persona:", Persona.nombre);
+console.log(
+    "Valor de la propiedad 'nombre' de la variable Persona:",
+    Persona.nombre
+);
 
 // Muestra por consola el lenguaje javascript de la variable FullStackDeveloper
-console.log("lenguaje javascript de la variable FullStackDeveloper:", FullStackDeveloper.lenguajes[0]);
+console.log(
+    "lenguaje javascript de la variable FullStackDeveloper:",
+    FullStackDeveloper.lenguajes[0]
+);
 
 // Crea un objeto de nombre Portatil que tenga la propiedad marca, accede a esta propiedad con .marca y muestrala por consola
 const Portatil = {
